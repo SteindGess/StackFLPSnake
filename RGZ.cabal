@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0ad9d40f772b58aab337bbea3e3412a8f4e256321c4a26e8ed15a060cbe871fb
+
+name:           RGZ
+version:        0.1.0.0
+description:    RGZ
+homepage:       https://github.com/#readme
+bug-reports:    https://github.com//issues
+author:         steind gess
+maintainer:     Author email here
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/
+
+library
+  exposed-modules:
+      Main
+      Snake
+  other-modules:
+      Paths_RGZ
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable RGZ-exe
+  main-is: Main.hs
+  other-modules:
+      Snake
+      Paths_RGZ
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      RGZ
+    , base >=4.7 && <5
+  default-language: Haskell2010
